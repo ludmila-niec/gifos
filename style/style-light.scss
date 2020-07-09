@@ -1,0 +1,42 @@
+@import "scss-light/variables";
+@import "scss-light/resets";
+@import "scss-light/mixins";
+@import "scss-light/components/button";
+@import 'scss-light/components/gridContainer';
+@import "scss-light/components/header";
+@import "scss-light/components/nav";
+@import "scss-light/components/search";
+@import "scss-light/components/suggestions";
+@import "scss-light/components/trending";
+@import "scss-light/components/misguifos";
+@import "scss-light/components/crearGuifos";
+
+html {
+    scroll-behavior: smooth;
+}
+body.light-theme {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: $bg-color;
+    transition: background 0.2s ease-in;
+}
+
+body {
+    .container {
+        margin: 3rem 7rem;
+    }
+}
+
+.ocultame {
+    display: none !important;
+}
+
+.ocultoprueba {
+    opacity: 0;
+}
+
+.boxSuggestion--active {
+    background-color: $colorBox-suggestion-active;
+    outline: 1px dotted $global-color;
+    outline-offset: -5px;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}

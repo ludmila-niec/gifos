@@ -1,0 +1,146 @@
+.dark-theme {
+    .search {
+        &__container {
+            margin-top: 2rem;
+            box-shadow: inset -2px -2px 0 0 $colorBox-grey-shadow,
+                inset 2px 2px 0 0 #ffffff;
+            background-color: $colorBox-grey;
+            @include displayFlex(space-evenly);
+            flex-direction: column;
+        }
+        &__header {
+            @include gradient(24px);
+            @include displayFlex(start);
+            width: 99%;
+            margin: 0.3rem;
+        }
+        &__headerTitle {
+            font-size: 14px;
+            margin-left: 0.5rem;
+            font-weight: $font-bold;
+        }
+
+        &__smallBox {
+            @include displayFlex(space-between);
+            width: 98%;
+            margin: 0.6rem;
+        }
+
+        &__input {
+            width: 90%;
+            padding: 0.8rem;
+            background: #ffffff;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 16px;
+            color: $text-color;
+
+            &::placeholder {
+                font-family: "Chakra Petch", sans-serif;
+                font-size: 16px;
+                color: #b4b4b4;
+                line-height: 22px;
+            }
+
+            &:focus {
+                color: $global-color;
+                font-family: "Chakra Petch", sans-serif;
+                outline: 1px dashed $primary-color;
+                outline-offset: -5px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        &__btn {
+            @include btnDisable;
+            background: #b4b4b4;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+            color: #8f8f8f;
+            padding: 0.5rem 0.8rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        &__btn-img {
+            margin-right: 0.4rem;
+        }
+
+        &__bigBox {
+            box-shadow: inset -2px -2px 0 0 $colorBox-grey-shadow,
+                inset 2px 2px 0 0 #ffffff;
+            background-color: $colorBox-grey;
+            @include displayFlex(space-evenly);
+            flex-direction: column;
+            align-items: flex-start;
+            height: 150px;
+            padding-left: 0.6rem;
+            padding-right: 8rem;
+        }
+
+        &__listSuggestion {
+            width: 98%;
+        }
+
+        &__boxSuggestion {
+            list-style-type: none;
+            margin: 0.7rem 0rem;
+            padding: 0.5rem;
+            color: $global-color;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 14px;
+            width: 100%;
+            background-color: $colorBox-suggestion-disable;
+            border: 1px solid $colorBox-suggestion-border;
+            box-shadow: inset -1px -1px 0 0 $colorBox-grey-shadow,
+                inset 1px 1px 0 0 #ffffff;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $colorBox-grey;
+                outline: 1px dotted $global-color;
+                outline-offset: -5px;
+                box-shadow: inset -2px -2px 0 0 $colorBox-grey-shadow,
+                    inset 2px 2px 0 0 #ffffff;
+            }
+        }
+        &__relatedTags {
+            display: flex;
+            margin: 1rem 0;
+        }
+
+        &__tag {
+            margin-right: 0.5rem;
+            background-color: $btn-more;
+            border: 1px solid $btn-more-border;
+            box-shadow: inset -2px -2px 0 0 $btn-more-shadow,
+                inset 2px 2px 0 0 #ffffff;
+            padding: 0.5rem;
+            font-family: "Chakra Petch", sans-serif;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $btn-more-darker;
+                outline: 1px dotted $global-color;
+                outline-offset: -5px;
+            }
+        }
+    }
+
+    .result {
+        margin-top: 3rem;
+
+        &__header {
+            @include section;
+        }
+
+        &__title {
+            @include sectionTitle;
+        }
+    }
+}

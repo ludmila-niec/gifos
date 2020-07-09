@@ -1,0 +1,17 @@
+.light-theme{
+.header {
+    &__container {
+        @include gradient(5vh);
+        border-style: outset;
+        border-width: 1px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 0 0 #110038;
+    }
+    &__title {
+        font-size: 12px;
+        font-weight: $font-regular;
+        margin-left: 1rem;
+    }
+}
+}

@@ -1,0 +1,27 @@
+@import "scss-dark/variables";
+@import "scss-dark/resets";
+@import "scss-dark/mixins";
+@import "scss-dark/components/button";
+@import 'scss-dark/components/gridContainer';
+@import "scss-dark/components/header";
+@import "scss-dark/components/nav";
+@import "scss-dark/components/search";
+@import "scss-dark/components/suggestions";
+@import "scss-dark/components/trending";
+@import "scss-dark/components/misguifos";
+@import "scss-dark/components/crearGuifos";
+
+body.dark-theme {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: $bg-color;
+    transition: background 0.2s ease-in;
+}
+
+.container {
+    margin: 3rem 7rem;
+}
+
+.ocultame {
+    display: none !important;
+}
+

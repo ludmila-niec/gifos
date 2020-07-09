@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GifOs</title>
+        <link rel="stylesheet" href="/style/style-light.css" />
+        <link rel="stylesheet" href="/style/style-dark.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body class="light-theme">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">
+                    Bienvenidos/as a Guifos.com! ------Donde los gifs
+                    están.//////
+                    <span class="header__counter"
+                        >Numero de visitas:
+                        <span
+                            class="header__counter--number"
+                            id="header-counter"
+                        ></span
+                    ></span>
+                </h1>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="navBar navBar--simple">
+                <a href="/index.html"
+                    ><img
+                        class="navBar__arrowBack"
+                        src="/assets/arrow.svg"
+                        alt="flecha volver"
+                /></a>
+                <a href="/index.html"
+                    ><img
+                        class="navBar__logo"
+                        src="/assets/gifOF_logo.png"
+                        alt="logo gifos"
+                    />
+                </a>
+            </nav>
+            <section class="crearGuifos" id="crear-guifos">
+                <div class="crearGuifos__container">
+                    <div class="crearGuifos__header">
+                        <h2 class="crearGuifos__headerTitle">Crear Guifos</h2>
+                    </div>
+                    <div class="crearGuifos__content">
+                        <img
+                            class="crearGuifos__windowIcon"
+                            src="/assets/window-img.png"
+                            alt="window icon"
+                        />
+                        <div class="crearGuifos__text">
+                            <h3 class="crearGuifos__subtitle">
+                                <strong
+                                    >Aquí podrás crear tus propios
+                                    guifos</strong
+                                >
+                            </h3>
+                            <p>
+                                Crear tu <span>guifo</span> es muy fácil, graba
+                                cualquier imagen con tu cámara y obtén guifos
+                                personalizados. Los pasos para crear tu guifo
+                                son:
+                            </p>
+                            <p>
+                                <strong>1)</strong> Dar permisos de acceso a la
+                                camara
+                            </p>
+                            <p><strong>2)</strong> Capturar tu momento Guifo</p>
+                            <p><strong>3)</strong> Revisar el momento</p>
+                            <p>
+                                <strong>4)</strong> Listo para subir y compartir
+                            </p>
+                            <p>
+                                ¿Quieres comenzar a crear tu
+                                <span>guifo</span> ahora?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="crearGuifos__btns">
+                        <button class="crearGuifos__btn1" id="btn-cancelar">
+                            Cancelar
+                        </button>
+                        <button class="crearGuifos__btn2" id="btn-comenzar">
+                            Comenzar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="crearGuifos crearGuifosPaso1 ocultame"
+                id="crear-guifos-paso-1"
+            >
+                <div class="crearGuifosPaso1__container">
+                    <div class="crearGuifosPaso1__header">
+                        <h2
+                            class="crearGuifosPaso1__headerTitle"
+                            id="titulo-Paso1"
+                        >
+                            Un Chequeo Antes de Empezar
+                        </h2>
+                        <img
+                            src="/assets/close.svg"
+                            alt="cerrar"
+                            class="crearGuifosPaso1__close"
+                        />
+                    </div>
+                    <div class="crearGuifosPaso1__content">
+                        <video
+                            id="preview-video"
+                            class="crearGuifosPaso1__video"
+                        ></video>
+                    </div>
+                    <div class="crearGuifosPaso1__btns" id="btn-capturar">
+                        <button class="crearGuifosPaso1__btnCamera">
+                            <img src="/assets/camera.svg" alt="camera-icon" />
+                        </button>
+                        <button class="crearGuifosPaso1__btnCapturar">
+                            Capturar
+                        </button>
+                    </div>
+                    <div
+                        class="crearGuifosPaso2__actions ocultame"
+                        id="stopRecording"
+                    >
+                        <div class="crearGuifosPaso2__timeContainer">
+                            <p
+                                class="crearGuifosPaso2__time"
+                                id="recordingTime"
+                            >
+                                00:00:00:00
+                            </p>
+                        </div>
+                        <div class="crearGuifosPaso2__btns" id="btn-stop">
+                            <div class="crearGuifosPaso2__btnRecordIcon">
+                                <img
+                                    id="recording-icon"
+                                    src="/assets/recording.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <button class="crearGuifosPaso2__btnDone">
+                                Listo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="crearGuifos crearGuifosPaso3 ocultame"
+                id="crear-guifos-paso-3"
+            >
+                <div class="crearGuifosPaso1__container">
+                    <div class="crearGuifosPaso1__header">
+                        <h2 class="crearGuifosPaso1__headerTitle">
+                            Vista Previa
+                        </h2>
+                        <img
+                            src="/assets/close.svg"
+                            alt="cerrar"
+                            class="crearGuifosPaso1__close"
+                        />
+                    </div>
+                    <div class="crearGuifosPaso1__content">
+                        <video
+                            class="crearGuifosPaso1__video"
+                            id="preview-recorded"
+                        ></video>
+                    </div>
+                    <div class="crearGuifosPaso2__actions" id="recorded-gif">
+                        <div class="crearGuifosPaso3__progressContainer">
+                            <div class="crearGuifosPaso2__timeContainer">
+                                <p
+                                    class="crearGuifosPaso2__time"
+                                    id="recordingTimePlay"
+                                >
+                                    00:00:00:00
+                                </p>
+                            </div>
+                            <div class="crearGuifosPaso3__progress">
+                                <button
+                                    class="crearGuifosPaso3__progressBarPlay"
+                                    id="btnPlay-pause"
+                                >
+                                    <img
+                                        src="/assets/forward.svg"
+                                        alt="play"
+                                        id="imgPlay-pause"
+                                    />
+                                </button>
+                                <div
+                                    class="crearGuifosPaso3__progressBar"
+                                    id="progreso-paso3"
+                                >
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                    <div class="inactive"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crearGuifosPaso3__btns">
+                            <button
+                                class="crearGuifosPaso3__btnRepeat"
+                                id="btn-repetirCaptura"
+                            >
+                                Repetir Captura
+                            </button>
+                            <button
+                                type="button"
+                                class="crearGuifosPaso3__btnOk"
+                                id="btn-subirGuifo"
+                            >
+                                Subir Guifo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="crearGuifos crearGuifosPaso4 ocultame"
+                id="crear-guifos-paso-4"
+            >
+                <div class="crearGuifosPaso1__container">
+                    <div class="crearGuifosPaso1__header">
+                        <h2 class="crearGuifosPaso1__headerTitle">
+                            Subiendo Guifo
+                        </h2>
+                        <img
+                            src="/assets/close.svg"
+                            alt="cerrar"
+                            class="crearGuifosPaso1__close"
+                        />
+                    </div>
+                    <div
+                        class="crearGuifosPaso1__content crearGuifosPaso4__window"
+                    >
+                        <img src="/assets/globe_img.png" alt="globo" />
+                        <h3 class="crearGuifosPaso4__subtitle">
+                            Estamos subiendo tu Guifo...
+                        </h3>
+                        <div
+                            class="crearGuifosPaso3__progressBar crearGuifosPaso4__progressBar"
+                            id="progreso-paso4"
+                        >
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                            <div class="inactive"></div>
+                        </div>
+                        <p class="crearGuifosPaso4__info">
+                            Tiempo restante: <span>38 años</span> algunos
+                            minutos...
+                        </p>
+                    </div>
+                    <div class="crearGuifosPaso1__btns">
+                        <button
+                            class="crearGuifosPaso4__btnCancelar cancelDisabled__btn"
+                            id="cancelar-upload"
+                        >
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="crearGuifos crearGuifosPaso5 ocultame"
+                id="crear-guifos-paso-5"
+            >
+                <div class="crearGuifos__container">
+                    <div class="crearGuifos__header">
+                        <h2 class="crearGuifos__headerTitle">
+                            Guifo Subido con éxito
+                        </h2>
+                    </div>
+                    <div class="crearGuifos__content crearGuifosPaso5__content">
+                        <div class="crearGuifosPaso5__topContent">
+                            <div class="crearGuifosPaso5__gifContainer">
+                                <img
+                                    class="crearGuifosPaso5__gifPreview"
+                                    id="previewGif-Uploaded"
+                                    src="#"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="crearGuifosPaso5__actions">
+                                <h3 class="crearGuifosPaso5__subtitle">
+                                    <strong>Guifo creado con éxito</strong>
+                                </h3>
+                                <button
+                                    class="crearGuifosPaso5__btnBg"
+                                    id="copiar-enlace-gruifo-btn"
+                                >
+                                    Copiar Enlace Guifo
+                                </button>
+                                <input
+                                    type="text"
+                                    class="crearGuifosPaso5__inputUrl ocultame"
+                                    id="inputUrl"
+                                />
+                                <button
+                                    class="crearGuifosPaso5__btnBg"
+                                    id="descargar-guifo-btn"
+                                >
+                                    Descargar Guifo
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            class="crearGuifosPaso5__btnSm"
+                            id="btn-listo-guifoCreado"
+                        >
+                            Listo
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section id="misGuifos" class="misGuifos cultame">
+                <div class="misGuifos">
+                    <div class="misGuifos__header">
+                        <h2 class="misGuifos__title">Mis Guifos:</h2>
+                    </div>
+                    <div class="gridContainer" id="crear-mis-guifos"></div>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"></script>
+        <script src="/crearGif-JS/timer.js"></script>
+        <script src="/crearGif-JS/barra-preview-play-pause.js"></script>
+        <script src="/crearGif-JS/barra-upload.js"></script>
+        <script src="/crearGif-JS/crear-gifos-app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.light-theme {
+    .trending {
+        margin-top: 3rem;
+
+        &__header {
+            @include section;
+        }
+
+        &__title {
+            @include sectionTitle;
+        }
+    } 
+}
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GifOs</title>
+    <link rel="stylesheet" href="/style/style-light.css" />
+    <link rel="stylesheet" href="/style/style-dark.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="light-theme">
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">
+                Bienvenidos/as a Guifos.com! ------Donde los gifs
+                están.//////
+                <span class="header__counter">Numero de visitas:
+                    <span class="header__counter--number" id="header-counter"></span></span>
+            </h1>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="navBar">
+            <a href="/index.html"><img class="navBar__logo" id="img-logo" src="/assets/gifOF_logo.png" alt="logo gifos" />
+            </a>
+            <div class="navBar__links">
+                <div class="crearGifosBtn">
+                    <a href="/crear-gifos.html">Crear Guifos</a>
+                </div>
+                <div class="theme">
+                    <div class="theme__btn">
+                        <div class="theme__dropTitle">
+                            Elegir tema
+                        </div>
+                        <span class="theme__dropArrow" id="themeDropDown">
+                            <img src="/assets/dropdown.svg" alt="" />
+                        </span>
+                    </div>
+                    <ul class="theme__box ocultame">
+                        <li class="theme__sailorDay">
+                            <span class="theme__sailorDay--active">S</span>ailor Day
+                        </li>
+                        <li class="theme__sailorNight">
+                            <span class="theme__sailorNight--active">S</span>ailor Night
+                        </li>
+                    </ul>
+                </div>
+                <div class="misGuifosBtn" id="misGuifosBtn">
+                    <p>
+                        <span class="misGuifosBtn--underline">M</span>is
+                        Guifos
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <section id="search" class="search">
+            <div class="search__container">
+                <div class="search__header">
+                    <h2 class="search__headerTitle">Buscar</h2>
+                </div>
+                <div class="search__smallBox">
+                    <input type="search" class="search__input" placeholder="Busca gifs, hashtags, temas, busca lo que quieras.." />
+                    <button class="search__btn" type="button">
+                        <img class="search__btn-img" id="logo-lupa" src="/assets/lupa_inactive.svg" alt="Lupa" />
+                        Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="search__bigBox ocultame">
+                <ul class="search__listSuggestion">
+                    <li class="search__boxSuggestion" id="resultado-sugerencia1"></li>
+                    <li class="search__boxSuggestion" id="resultado-sugerencia2"></li>
+                    <li class="search__boxSuggestion" id="resultado-sugerencia3"></li>
+                </ul>
+            </div>
+            <div class="search__relatedTags ocultame">
+            </div>
+            <div class="result ocultame">
+                <div class="result__header">
+                    <h2 class="result__title">Resultado busqueda:</h2>
+                </div>
+                <div class="gridContainer" id="grilla-busqueda">
+                </div>
+                <div class="gridNotFound ocultame" id="container-not-found">
+                    <img src="/assets/404_page_2x.png" alt="404 not found">
+                </div>
+            </div>
+        </section>
+        <section id="suggestion" class="suggestion suggestion--oculto">
+            <div class="suggestion__container">
+                <div class="suggestion__header">
+                    <h2 class="suggestion__title">Hoy te sugerimos:</h2>
+                </div>
+                <div class="suggestion__gridContainer" id="grilla-sugerencia">
+                </div>
+            </div>
+        </section>
+        <section id="tendencias" class="trending">
+            <div class="trending__container">
+                <div class="trending__header">
+                    <h2 class="trending__title">Tendencias:</h2>
+                </div>
+                <div class="gridContainer" id="grilla-tendencia">
+                </div>
+            </div>
+        </section>
+        <section id="misGuifos" class="misGuifos ocultame">
+            <div class="misGuifos">
+                <div class="misGuifos__header">
+                    <h2 class="misGuifos__title">Mis Guifos:</h2>
+                </div>
+                <div class="gridContainer" id="home-mis-guifos">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/gifos-home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.dark-theme {
+    .gridContainer {
+        margin: 1rem 0;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+
+        &__gifBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 320px;
+            position: relative;
+
+            &:hover {
+                background-color: $colorBox-grey;
+            }
+        }
+
+        &__url {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 99%;
+            height: 99%;
+
+            &:hover{
+                outline: 1px dotted $global-color;
+                outline-offset: -5px;
+            }
+        }
+
+        &__gif {
+            object-fit: cover;
+            height: 99%;
+            width: 99%;
+        }
+
+        &__bottom {
+            @include gradient(24px);
+            position: absolute;
+            bottom: 3px;
+            width: 98%;
+            overflow: hidden;
+            margin-bottom: 2px;
+            transition: 0.2s ease-out;
+            opacity: 0;
+
+            &:hover {
+                opacity: 100;
+            }
+        }
+
+        &__hashtag {
+            font-size: 14px;
+            font-weight: $font-bold;
+            margin-top: 2px;
+        }
+    }
+
+    .gridNotFound{
+        @include displayFlex(center);
+        margin: 2rem 0;
+    }
+}
+
+.containerPlus {
+    grid-column: span 2;
+    justify-self: stretch;
+}

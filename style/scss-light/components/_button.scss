@@ -1,0 +1,19 @@
+.light-theme {
+    .search__btn--enable {
+        @include btnPrimary;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+
+        &:active {
+            @include btnPrimary-hover;
+        }
+    }
+
+    .search__btn--active {
+        @include btnPrimary-hover;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+    }
+}

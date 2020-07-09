@@ -1,0 +1,55 @@
+@mixin gradient($height) {
+    background: linear-gradient(270deg, $primary-color, $secondary-color);
+    height: $height;
+    color: #fff;
+}
+
+@mixin displayFlex($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin btnPrimary {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    padding: 0.6rem 1.5rem;
+    background-color: $primary-color;
+    border: 1px solid $global-color;
+    box-shadow: inset -1px -1px 0 0 $btn-primary-shadow,
+        inset 1px 1px 0 0 #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+}
+
+@mixin btnPrimary-hover {
+    background-color: $btn-primary-darker;
+    outline: 1px dotted $global-color;
+    outline-offset: -5px;
+}
+
+@mixin btnDisable {
+    font-size: 16px;
+    color: $global-color;
+    font-family: "Chakra Petch", sans-serif;
+    padding: 0.6rem 1.5rem;
+    background-color: #2e32fb;
+    border: 1px solid rgba(51, 53, 143, 0.2);
+    box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
+}
+
+@mixin section {
+    background-color: #fffafe;
+    border: 1px solid #2E32FB;
+    box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #110038;
+}
+
+@mixin sectionTitle {
+    font-size: 12px;
+    padding: 0.3rem;
+    font-weight: $font-regular;
+    color: $text-color;
+}

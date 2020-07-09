@@ -1,0 +1,115 @@
+.dark-theme {
+    .navBar {
+        @include displayFlex(space-between);
+
+        &__links {
+            @include displayFlex(space-evenly);
+        }
+    }
+    .crearGifosBtn {
+        @include btnPrimary;
+        color: #fff;
+        margin: 0 1.5rem;
+        a {
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+        &:hover,
+        &:active {
+            @include btnPrimary-hover;
+            color: #fff;
+        }
+    }
+
+    .theme {
+        &__btn {
+            @include displayFlex(center);
+            position: relative;
+        }
+
+        &__dropTitle {
+            @include btnPrimary;
+
+            &:hover,
+            &:active {
+                @include btnPrimary-hover;
+            }
+        }
+        &__dropArrow {
+            @include btnPrimary;
+            padding: 0.6rem 0.8rem;
+
+            &:hover,
+            &:active {
+                @include btnPrimary-hover;
+            }
+        }
+
+        &__box {
+            position: absolute;
+            background-color: $colorBox-grey;
+            box-shadow: inset -2px -2px 0 0 $colorBox-grey-shadow,
+                inset 2px 2px 0 0 #ffffff;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 170px;
+            height: 90px;
+        }
+
+        &__sailorDay {
+            font-size: 16px;
+            background-color: #cccccc;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+            list-style: none;
+            color: $global-color;
+            padding: 0.3rem;
+            width: 90%;
+            cursor: pointer;
+
+            &--active {
+                text-decoration: none;
+            }
+        }
+        &__sailorNight {
+            @include btnDisable;
+            color: #fff;
+            
+            list-style: none;
+            width: 90%;
+            padding: 0.3rem;
+            cursor: pointer;
+
+            &--active {
+                text-decoration: underline;
+            }
+        }
+    }
+    .misGuifosBtn {
+        font-size: 16px;
+        line-height: 18px;
+        color: #fff;
+        line-height: 18px;
+        padding: 0.6rem 1.8rem 0.6rem 0.5rem;
+        margin-left: 1.5rem;
+        cursor: pointer;
+
+        &--underline {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        &:hover {
+            outline: 1px dotted #fff;
+            outline-offset: -5px;
+        }
+        &:active {
+            color: #808080;
+            outline: none;
+        }
+    }
+}
