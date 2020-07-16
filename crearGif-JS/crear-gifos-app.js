@@ -91,7 +91,7 @@ if (listaGuifosCreados === null) {
             let elemento = listaGuifosCreados[i];
 
             let pedido = await fetch(
-                `http://api.giphy.com/v1/gifs/${elemento}?api_key=${apiKey}`
+                `https://api.giphy.com/v1/gifs/${elemento}?api_key=${apiKey}`
             );
             let respuesta = await pedido.json();
             return respuesta;
@@ -188,7 +188,7 @@ async function subirGif() {
     form.append("file", blob, "miGif.gif");
     try {
         let pedido = await fetch(
-            "http://upload.giphy.com/v1/gifs?api_key=5JaMj27gUqbTFKVrsbTOc9rzA9R9U5uT",
+            "https://upload.giphy.com/v1/gifs?api_key=5JaMj27gUqbTFKVrsbTOc9rzA9R9U5uT",
             {
                 method: "POST",
                 body: form,
@@ -226,7 +226,7 @@ async function fetchGuifoCreado() {
         let lista = JSON.parse(items);
         let lastItem = lista.length - 1;
         let pedido = await fetch(
-            `http://api.giphy.com/v1/gifs/${lista[lastItem]}?api_key=${apiKey}`
+            `https://api.giphy.com/v1/gifs/${lista[lastItem]}?api_key=${apiKey}`
         );
         if (!pedido.ok) {
             throw new Error("Ocurrió un error fetch GET gif creado");

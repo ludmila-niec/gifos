@@ -141,7 +141,7 @@ async function crearElementosBusqueda(busqueda, contenedor) {
 async function autocompleteBusqueda(keyword) {
     try {
         let pedido = await fetch(
-            `http://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${keyword}&limit=24`
+            `https://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${keyword}&limit=24`
         );
         if (!pedido.ok) {
             throw new Error(
@@ -175,7 +175,7 @@ async function crearAutocomplete(keyword) {
 async function obtenerRelatedTags(keyword) {
     try {
         let pedido = await fetch(
-            `http://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${keyword}`
+            `https://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${keyword}`
         );
         if (!pedido.ok) {
             throw new Error(
@@ -192,7 +192,7 @@ async function obtenerRelatedTags(keyword) {
 async function obtenerBusquedaGif(keyword) {
     try {
         let pedido = await fetch(
-            `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=24`
+            `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=24`
         );
         if (!pedido.ok) {
             throw new Error("Error en fetch Search Endpoint" + pedido.status);
@@ -330,7 +330,7 @@ opcionResultado3.addEventListener("click", () => {
 async function obtenerSugerencia(sugerencia) {
     try {
         let respuesta = await fetch(
-            `http://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${sugerencia}`
+            `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${sugerencia}`
         );
 
         if (!respuesta.ok) {
@@ -421,7 +421,7 @@ mostrarSugerencia();
 async function obtenerTrendingGif() {
     try {
         let pedido = await fetch(
-            `http://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=24`
+            `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=24`
         );
         if (!pedido.ok) {
             throw new Error("Error en fetch Trending Endpoint" + pedido.status);
@@ -455,7 +455,7 @@ if (listaGuifosCreados === null) {
             try {
                 let elemento = listaGuifosCreados[i];
                 let pedido = await fetch(
-                    `http://api.giphy.com/v1/gifs/${elemento}?api_key=${apiKey}`
+                    `https://api.giphy.com/v1/gifs/${elemento}?api_key=${apiKey}`
                 );
                 if(!pedido.ok){
                     throw new Error('Error en fetch request mi guifo creado' + pedido.status)
