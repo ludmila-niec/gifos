@@ -25,4 +25,5 @@ Segundo Proyecto de la carrera Desarrollo Web Full Stack realizado en Acamica
 
 
 
-*Version 2.0 cooming soon*
+*Version 2.0 It's here!*
+[Live Demo Version 2](https://gifos-version2.vercel.app/)
